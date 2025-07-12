@@ -3,7 +3,7 @@ name = "searchdraw"
 version = "1.0"
 description = "CLI to search through .drawio files"
 authors = [
-  { name="Sanyog Mishra", github="DarkRaiderCB" }
+  { name="Sanyog Mishra (github: DarkRaiderCB)" }
 ]
 readme = "README.md"
 requires-python = ">=3.8"
