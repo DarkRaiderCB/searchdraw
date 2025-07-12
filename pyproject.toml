@@ -1,0 +1,16 @@
+[project]
+name = "searchdraw"
+version = "1.0"
+description = "CLI to search through .drawio files"
+authors = [
+  { name="Sanyog Mishra", github="DarkRaiderCB" }
+]
+readme = "README.md"
+requires-python = ">=3.8"
+
+[project.scripts]
+searchdraw = "searchdraw.cli:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
