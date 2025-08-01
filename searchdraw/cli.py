@@ -37,14 +37,14 @@ def extract_visible_text_from_drawio(file_path, case_sensitive=False):
 def search_drawio_files(root_dir, query, case_sensitive=False):
     if not case_sensitive:
         query = query.lower()
-    query_words = re.findall(r'\w+', query.lower())
+    query_words = re.findall(r'\w+', query)
     matching_files = []
 
     for dirpath, _, filenames in os.walk(root_dir):
         for filename in filenames:
             if filename.endswith(".drawio"):
                 file_path = os.path.join(dirpath, filename)
-                full_text = extract_visible_text_from_drawio(file_path)
+                full_text = extract_visible_text_from_drawio(file_path, case_sensitive)
 
                 if all(word in full_text for word in query_words):
                     matching_files.append(file_path)
