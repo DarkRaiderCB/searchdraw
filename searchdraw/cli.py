@@ -35,9 +35,10 @@ def extract_visible_text_from_drawio(file_path, case_sensitive=False):
 
 
 def search_drawio_files(root_dir, query, case_sensitive=False):
-    if not case_sensitive:
-        query = query.lower()
     query_words = re.findall(r'\w+', query)
+    if not case_sensitive:
+        query_words = [word.lower() for word in query_words]
+
     matching_files = []
 
     for dirpath, _, filenames in os.walk(root_dir):
