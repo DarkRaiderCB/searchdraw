@@ -1,6 +1,6 @@
 [project]
 name = "searchdraw"
-version = "1.0"
+version = "2.0"
 description = "CLI to search through .drawio files"
 authors = [
   { name="Sanyog Mishra (github: DarkRaiderCB)" }
